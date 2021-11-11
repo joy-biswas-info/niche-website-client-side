@@ -9,11 +9,12 @@ import PrivetRoute from './Components/Pages/LogIn/PrivetRouter/PrivetRouter';
 import PlaceOrder from './Components/Pages/PlaceOrder/PlaceOrder';
 import Footer from './Components/Footer/Footer';
 import NotFound404 from './Components/Pages/NotFound/NotFound404';
-import AddSpot from './Components/Pages/Home/Places/AddSpot/AddSpot';
-import ManageBooking from './Components/Pages/ManageBooking/ManageBooking';
 import MyOrder from './Components/Pages/MyOrder/MyOrder';
 import Contact from './Components/Pages/Home/Home/Contact/Contact';
 import DashBoard from './Components/Pages/DashBoard/DashBoard';
+import ManageOrder from './Components/Pages/ManageOrder/ManageOrder';
+import AddProduct from './Components/Pages/Home/Places/AddProduct/AddProduct';
+
 
 
 
@@ -30,10 +31,10 @@ function App() {
             <Home></Home>
           </Route>
           <PrivetRoute path="/manageorder">
-            <ManageBooking></ManageBooking>
+            <ManageOrder></ManageOrder>
           </PrivetRoute>
           <PrivetRoute path="/addspot">
-            <AddSpot></AddSpot>
+            <AddProduct></AddProduct>
           </PrivetRoute>
           <PrivetRoute path="/dashboard">
             <DashBoard></DashBoard>
@@ -41,10 +42,10 @@ function App() {
           <Route path="/login">
             <LogIn></LogIn>
           </Route>
-          <PrivetRoute path="/placeorder/:placeId">
+          <PrivetRoute path="/placeorder/:id">
           <PlaceOrder></PlaceOrder>
           </PrivetRoute>
-          <PrivetRoute path="/myorder/:email">
+          <PrivetRoute path="/myorder/">
             <MyOrder></MyOrder>
           </PrivetRoute>
           <Route path="/contact">

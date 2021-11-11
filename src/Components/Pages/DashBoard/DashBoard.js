@@ -1,9 +1,14 @@
 import React from 'react';
+import ManageOrder from '../ManageOrder/ManageOrder';
+import MyOrder from '../MyOrder/MyOrder';
 
 const DashBoard = () => {
     return (
         <div>
-            This Is DashBoard 
+            <MyOrder></MyOrder>
+
+            {/* For Admin  */}
+            <ManageOrder></ManageOrder>
         </div>
     );
 };

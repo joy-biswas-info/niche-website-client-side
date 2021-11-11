@@ -12,12 +12,12 @@ const Place = (props) => {
     }
     
     return (
-        <Col className="m-2 p-4 spot rounded shadow-sm">
-            <img src={img} alt="spot" className="img-fluid" />
-            <h2>{name}</h2>
+        <Col className="mx-auto my-2 rounded shadow-sm col-lg-4 col-md-12 py-2">
+            <img src={img} alt="spot" style={{width:'350px',margin:"0 auto"}} />
+            <h2>{name.slice(0,20)}</h2>
             <p>{description.slice(0,100)}</p>
-            <h2>{cost}</h2>
-            <Button variant="danger" onClick={()=>{handelBooking(_id)}} >Book Now </Button>
+            <h2>$ {cost}</h2>
+            <Button variant="danger" onClick={()=>{handelBooking(_id)}} >Buy Now</Button>
         </Col>
     );
 };

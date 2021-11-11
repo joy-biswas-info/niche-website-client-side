@@ -8,10 +8,10 @@ const Navigation = () => {
   const { user, logOut } = useAuth();
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="fw-bold">
+    <Navbar collapseOnSelect expand="lg" variant="light" className="fw-bold" style={{zIndex:"4"}}>
       <Container>
         <Navbar.Brand as={Link} to="/home">
-          <h1>Joy Travels </h1>
+          <img src="./logo.png" alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
@@ -32,7 +32,7 @@ const Navigation = () => {
             {user.email && <Nav.Link as={Link} to="/manageorder">
               Manage-Order
             </Nav.Link>}
-            {user.email && <Nav.Link as={Link} to={`/myorder/${user.email}`}>My-Order</Nav.Link>}
+            {user.email && <Nav.Link as={Link} to={"myorder"}>My-Order</Nav.Link>}
               {user.email ? (
                 <div>
                   <Button variant="danger" onClick={logOut}>

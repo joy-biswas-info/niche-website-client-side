@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import "./ManageBooking.css";
+import "./ManageOrder.css";
 
-const ManageBooking = () => {
+const ManageOrder = () => {
   const [manageOrder, setManageOrder] = useState([]);
   useEffect(() => {
-    fetch(`https://ancient-hollows-54145.herokuapp.com/manageorder`)
+    fetch(`http://localhost:5000/orders`)
       .then((res) => res.json())
-      .then((data) => setManageOrder(data));
+      .then((data) => setManageOrder(data))
+      .then(data=>console.log(data));
   }, []);
   const handelCancel = (_id) => {
     const url = `https://ancient-hollows-54145.herokuapp.com/order/${_id}`;
@@ -87,4 +88,4 @@ const ManageBooking = () => {
   );
 };
 
-export default ManageBooking;
+export default ManageOrder;

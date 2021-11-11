@@ -1,10 +1,10 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useForm} from "react-hook-form";
-import "./AddSpot.css";
+import "./AddProduct.css";
 import axios from "axios";
 
-const AddSpot = () => {
+const AddProduct = () => {
   const { register, handleSubmit,reset } = useForm();
   const onSubmit = (data) => {
       axios.post('https://ancient-hollows-54145.herokuapp.com/places', data)
@@ -39,4 +39,4 @@ const AddSpot = () => {
   );
 };
 
-export default AddSpot;
+export default AddProduct;
