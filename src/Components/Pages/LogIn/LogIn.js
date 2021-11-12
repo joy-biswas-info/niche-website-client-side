@@ -31,7 +31,7 @@ const LogIn = () => {
         ) : (
           <div>
             <Register></Register>
-            <Button varient="primary" onClick={signInUsingGoogle}>
+            <Button className="bg-warning mx-auto" onClick={signInUsingGoogle}>
               Google login
             </Button>
           </div>

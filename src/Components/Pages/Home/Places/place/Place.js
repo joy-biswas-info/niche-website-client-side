@@ -17,7 +17,7 @@ const Place = (props) => {
             <h2>{name.slice(0,20)}</h2>
             <p>{description.slice(0,100)}</p>
             <h2>$ {cost}</h2>
-            <Button variant="danger" onClick={()=>{handelBooking(_id)}} >Buy Now</Button>
+            <Button variant="warning" onClick={()=>{handelBooking(_id)}} >Buy Now</Button>
         </Col>
     );
 };

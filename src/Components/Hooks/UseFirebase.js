@@ -14,6 +14,7 @@ const useFireBase = () => {
   // const { url, history} = LogIn();
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [admin, setAdmin] = useState(false);
 
 
   const auth = getAuth();
@@ -24,6 +25,7 @@ const useFireBase = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         setUser(result.user)
+        saveUser(result.user.email,result.user.displayName)
           // history.push(url);
         
       })
@@ -44,12 +46,33 @@ const useFireBase = () => {
     return () => unsubscribe;
   }, []);
 
+  useEffect(() => {
+    fetch(`http://localhost:5000/user/${user?.email}`)
+      .then(res => res.json())
+      .then(data => {
+        setAdmin(data.admin)
+      })
+},[user.email])
+
+  const saveUser = (email, displayName) => {
+    const user = { displayName,email }
+    fetch('http://localhost:5000/user', {
+      method: "PUT",
+      headers: {
+        'content-type':"application/json"
+      },
+      body:JSON.stringify(user)
+    })
+    .then()
+  }
+
   const logOut = () => {
     setIsLoading(true);
     signOut(auth).then(() => {});
   };
   return {
     user,
+    admin,
     isLoading,
     logOut,
     signInUsingGoogle,

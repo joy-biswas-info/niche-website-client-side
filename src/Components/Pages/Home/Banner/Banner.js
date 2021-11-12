@@ -13,7 +13,7 @@ const Banner = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Cox's Bazar Sea betch</h3>
+          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">Cox's Bazar Sea betch</h3>
           <p>Book a Hotel room on Sea view Room .</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -24,7 +24,7 @@ const Banner = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Shylihet </h3>
+          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">Shylihet </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -34,12 +34,12 @@ const Banner = () => {
           src="./image/slider1.jpg"
           alt="Third slide"
         />
-        <Carousel.Caption>
-          <h3>Success is where preparation and opportunity meet</h3>
+        <Carousel.Caption className="mb-4">
+          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">Success is where preparation and opportunity meet</h3>
           <p>
           It's time to dress up right. It's time to raise the curtain on the Muppet Show to night. Here's the story of a lovely lady who was three very lovely.  
           </p>
-        <Button>Explore</Button>
+        <Button className="bg-warning px-2 text-black fs-3 fw-bold">Explore</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

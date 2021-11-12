@@ -13,7 +13,7 @@ const Places = () => {
     },[])
     return (
         <Container id="spot" className="my-4">
-            <h2 className="text-center fw-bold text-3xl my-4">Explore Your Dream</h2>
+            <h2 className="text-center fw-bold fs-1 my-4 text-warning">Explore Your Dream</h2>
             <Row className="row">
             {
                 places.map(place=><Place place={place} key={place._id}></Place>)

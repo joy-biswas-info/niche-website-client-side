@@ -5,10 +5,9 @@ import "./ManageOrder.css";
 const ManageOrder = () => {
   const [manageOrder, setManageOrder] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`http://localhost:5000/orders/manage`)
       .then((res) => res.json())
       .then((data) => setManageOrder(data))
-      .then(data=>console.log(data));
   }, []);
   const handelCancel = (_id) => {
     const url = `https://ancient-hollows-54145.herokuapp.com/order/${_id}`;

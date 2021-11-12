@@ -32,11 +32,6 @@ const Register = () => {
       setError("Password Must be at least 6 characters long.");
       return;
     }
-    if (!/(?=.*[A-Z])/.test(password)) {
-      setError("Password Must contain 1 upper case");
-      return;
-    }
-
     if (isLogin) {
       processLogIn(email, password);
     } else {
@@ -90,10 +85,10 @@ const Register = () => {
   }
 
   return (
-    <div className="login-form">
-      <div>
-        <form onSubmit={handleRegistration}>
-          <h3 className="text-primary">
+    <div className="login-form d-flex">
+      <div className="col-md-3"></div>
+      <div className="col-md-6"><form onSubmit={handleRegistration}>
+          <h3 className="text-warning fs-2 fw-bold">
             Please {isLogin ? "Login" : "Register"}
           </h3>
           {!isLogin && (
@@ -156,14 +151,11 @@ const Register = () => {
             </div>
           </div>
           <div className="row mb-3 text-danger">{error}</div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-warning my-1">
             {isLogin ? "Login" : "Register"}
           </button>
-        </form>
-        <p>
-          Already have an account? <Link to="/login">Login</Link>
-        </p>
-      </div>
+        </form></div>
+      <div className="col-md-3"></div>
     </div>
   );
 };
