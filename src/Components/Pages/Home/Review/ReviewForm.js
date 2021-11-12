@@ -15,7 +15,7 @@ const ReviewForm = () => {
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
-            <h2 className="text-center">Please product your order</h2>
+            <h2 className="text-center">Please review Your Exprience</h2>
             {user.email && (
               <input
                 {...register("email")}
