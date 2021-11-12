@@ -6,9 +6,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const LoginForm = () => {
-  const auth = getAuth();
+    const auth = getAuth();
   const [loginData, setLoginData] = useState();
-
   const handleChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -17,12 +16,12 @@ const LoginForm = () => {
     setLoginData(newLoginData);
   };
 
-  const handelLoginSubmit = (e) => {
-      e.preventDefault();
+    const handelLoginSubmit = (e) => {
+        e.preventDefault();
       signInWithEmailAndPassword(auth, loginData.email, loginData.password)
   .then((userCredential) => {
     // Signed in 
-    const user = userCredential.user;
+      const user = userCredential.user;
     // ...
   })
   .catch((error) => {
