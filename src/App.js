@@ -9,6 +9,8 @@ import PrivetRoute from "./Components/Pages/LogIn/PrivetRouter/PrivetRouter";
 import Footer from "./Components/Footer/Footer";
 import NotFound404 from "./Components/Pages/NotFound/NotFound404";
 import DashBoard from "./Components/Pages/DashBoard/DashBoard";
+import PlaceOrder from "./Components/Pages/PlaceOrder/PlaceOrder";
+import Products from "./Components/Pages/Products/Products";
 
 
 function App() {
@@ -25,6 +27,12 @@ function App() {
           </Route>
           <PrivetRoute path="/dashboard">
             <DashBoard></DashBoard>
+          </PrivetRoute>
+          <PrivetRoute path="/placeorder/:id">
+            <PlaceOrder></PlaceOrder>
+          </PrivetRoute>
+          <PrivetRoute path="/products">
+            <Products></Products>
           </PrivetRoute>
           <Route path="/login">
             <LogIn></LogIn>

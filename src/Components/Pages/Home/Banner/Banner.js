@@ -1,11 +1,11 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import { Carousel } from "react-bootstrap";
 import "./Banner.css";
 
 const Banner = () => {
   return (
-    <Carousel style={{margin:"-100px 0 0 0 "}}>
+    <Carousel style={{ margin: "-100px 0 0 0 " }}>
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100 banner-image"
@@ -13,8 +13,12 @@ const Banner = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">Cox's Bazar Sea betch</h3>
-          <p>Book a Hotel room on Sea view Room .</p>
+          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">
+            IT'S STILL MAGIC THOUGH YOU KNOW HOW IT HAS DONE
+          </h3>
+          <Button className="bg-warning px-2 text-black fs-3 fw-bold">
+            EXPLORE ALL
+          </Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={1000}>
@@ -24,8 +28,10 @@ const Banner = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">Shylihet </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">SUCCESS IS THE MAXIMUM ABILITY TO UTLIZE THAT YOU HAVE</h3>
+          <Button className="bg-warning px-2 text-black fs-3 fw-bold">
+            EXPLORE ALL
+          </Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -35,11 +41,17 @@ const Banner = () => {
           alt="Third slide"
         />
         <Carousel.Caption className="mb-4">
-          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">Success is where preparation and opportunity meet</h3>
+          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">
+            Success is where preparation and opportunity meet
+          </h3>
           <p>
-          It's time to dress up right. It's time to raise the curtain on the Muppet Show to night. Here's the story of a lovely lady who was three very lovely.  
+            It's time to dress up right. It's time to raise the curtain on the
+            Muppet Show to night. Here's the story of a lovely lady who was
+            three very lovely.
           </p>
-        <Button className="bg-warning px-2 text-black fs-3 fw-bold">Explore</Button>
+          <Button className="bg-warning px-2 text-black fs-3 fw-bold">
+            EXPLORE ALL
+          </Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

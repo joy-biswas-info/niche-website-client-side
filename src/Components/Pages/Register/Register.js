@@ -14,7 +14,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isLogin, setIsLogin] = useState(false);
-  // const [seveUser, setSaveUser] = useState({});
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -28,10 +27,6 @@ const Register = () => {
   };
   const handleRegistration = (e) => {
     e.preventDefault();
-    if (password.length < 6) {
-      setError("Password Must be at least 6 characters long.");
-      return;
-    }
     if (isLogin) {
       processLogIn(email, password);
     } else {
