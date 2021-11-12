@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import useAuth from "../../Hooks/UseAuth";
 
 const MyOrder = () => {
   const { email } = useParams();
   const [myOrder, setMyOrder] = useState([]);
-  const {user}=useAuth()
+  const { user } = useAuth();
+  const history= useHistory()
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
-      .then((res) => res.json())
+    fetch(`http://localhost:5000/orders?email=${user.email}`, {
+      headers: {
+        "authorization": `Bearer ${localStorage.getItem('idToken')}`
+      }
+    })
+      .then((res) =>res.json())
       .then((data) => {
         setMyOrder(data);
       });
@@ -39,7 +44,8 @@ const MyOrder = () => {
         <th className="p-2">Quantity</th>
         <th className="p-2">Manage</th>
         {myOrder.map((order) => (
-          <tr order={order} key={order._id}>
+          <tbody order={order} key={order._id}>
+            <tr>
             <th className="p-2">{order.name}</th>
             <th className="p-2">{order.quantity}</th>
             <td>
@@ -52,6 +58,7 @@ const MyOrder = () => {
               </button>
             </td>
           </tr>
+          </tbody>
         ))}
       </table>
     </Container>

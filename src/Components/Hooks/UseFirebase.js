@@ -3,7 +3,7 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
-  signOut,
+  signOut,getIdToken
 } from "@firebase/auth";
 import { useEffect, useState } from "react";
 import initializeFirebase from "../Firebase/InitializeFirebase";
@@ -33,6 +33,8 @@ const useFireBase = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
+        getIdToken(user)
+        .then(idToken=>localStorage.setItem('idToken',idToken))
         setUser(user);
       } else {
         setUser({});

@@ -7,13 +7,13 @@ const Places = () => {
     const [places, setPlaces] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('http://localhost:5000/products?home=6')
             .then(res => res.json())
             .then(data=>setPlaces(data))
     },[])
     return (
         <Container id="spot" className="my-4">
-            <h2 className="text-center fw-bold text-3xl my-4">Book Your Spot Now</h2>
+            <h2 className="text-center fw-bold text-3xl my-4">Explore Your Dream</h2>
             <Row className="row">
             {
                 places.map(place=><Place place={place} key={place._id}></Place>)

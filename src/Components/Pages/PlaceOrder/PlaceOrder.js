@@ -19,7 +19,8 @@ const PlaceOrder = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios.post('http://localhost:5000/order',data)
-    .then(res=>console.log(res))
+      .then(res => console.log(res))
+    .then(alert("Your Order Has Been Received"))
   };
   return (
     <Container>
