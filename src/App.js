@@ -11,6 +11,8 @@ import NotFound404 from "./Components/Pages/NotFound/NotFound404";
 import DashBoard from "./Components/Pages/DashBoard/DashBoard";
 import PlaceOrder from "./Components/Pages/PlaceOrder/PlaceOrder";
 import Products from "./Components/Pages/Products/Products";
+import Register from "./Components/Pages/Register/Register";
+import LoginForm from "./Components/Pages/Register/LoginForm";
 
 
 function App() {
@@ -36,6 +38,12 @@ function App() {
           </PrivetRoute>
           <Route path="/login">
             <LogIn></LogIn>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+          <Route path="/loginform">
+            <LoginForm></LoginForm>
           </Route>
           {/* <Route path="*">
             <NotFound404></NotFound404>

@@ -10,7 +10,6 @@ import initializeFirebase from "../Firebase/InitializeFirebase";
 
 initializeFirebase();
 const useFireBase = () => {
-
   // const { url, history} = LogIn();
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
