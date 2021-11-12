@@ -9,7 +9,7 @@ const Admin = () => {
     formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/user/admin', {
+        fetch('https://vast-escarpment-72434.herokuapp.com/user/admin', {
             method: "PUT",
             headers: {
                 'content-type':'application/json'

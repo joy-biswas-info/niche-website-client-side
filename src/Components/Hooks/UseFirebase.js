@@ -46,7 +46,7 @@ const useFireBase = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user?.email}`)
+    fetch(`https://vast-escarpment-72434.herokuapp.com/user/${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setAdmin(data.admin)
@@ -55,7 +55,7 @@ const useFireBase = () => {
 
   const saveUser = (email, displayName) => {
     const user = { displayName,email }
-    fetch('http://localhost:5000/user', {
+    fetch('https://vast-escarpment-72434.herokuapp.com/user', {
       method: "PUT",
       headers: {
         'content-type':"application/json"

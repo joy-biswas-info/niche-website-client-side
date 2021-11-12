@@ -7,7 +7,7 @@ const Places = () => {
     const [places, setPlaces] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products?home=6')
+        fetch('https://vast-escarpment-72434.herokuapp.com/products?home=6')
             .then(res => res.json())
             .then(data=>setPlaces(data))
     },[])

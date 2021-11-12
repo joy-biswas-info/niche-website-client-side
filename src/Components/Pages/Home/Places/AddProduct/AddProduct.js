@@ -7,7 +7,7 @@ import axios from "axios";
 const AddProduct = () => {
   const { register, handleSubmit,reset } = useForm();
   const onSubmit = (data) => {
-      axios.post('https://ancient-hollows-54145.herokuapp.com/places', data)
+      axios.post('https://vast-escarpment-72434.herokuapp.com/addproduct', data)
           .then(res => {
             alert("Product Added Sucessfully")
             reset()
@@ -20,7 +20,7 @@ const AddProduct = () => {
       <h2 className="text-center text-white ">Add A Product</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto">
           <input
-            {...register("name", { required: true, maxLength: 20 })}
+            {...register("name", { required: true})}
             placeholder="Product name"
             style={{width:"64%",marginBottom:'15px'}}
           />{" "}

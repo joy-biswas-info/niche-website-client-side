@@ -12,14 +12,14 @@ const PlaceOrder = () => {
   const [product, setProduct] = useState({});
   const { user } = useAuth();
   useEffect(() => {
-    fetch(`http://localhost:5000/placeorder/${id}`)
+    fetch(`https://vast-escarpment-72434.herokuapp.com/placeorder/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/order", data)
+      .post("https://vast-escarpment-72434.herokuapp.com/order", data)
       .then((res) => console.log(res))
       .then(alert("Your Order Has Been Received"));
   };

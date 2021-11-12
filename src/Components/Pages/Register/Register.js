@@ -50,7 +50,7 @@ const Register = () => {
 }
     const saveUser = (email, displayName) => {
         const user = { displayName,email }
-        fetch('http://localhost:5000/user', {
+        fetch('https://vast-escarpment-72434.herokuapp.com/user', {
           method: "PUT",
           headers: {
             'content-type':"application/json"

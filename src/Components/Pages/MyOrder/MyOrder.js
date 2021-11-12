@@ -10,7 +10,7 @@ const MyOrder = () => {
   const history= useHistory()
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`, {
+    fetch(`https://vast-escarpment-72434.herokuapp.com/orders?email=${user.email}`, {
       headers: {
         "authorization": `Bearer ${localStorage.getItem('idToken')}`
       }

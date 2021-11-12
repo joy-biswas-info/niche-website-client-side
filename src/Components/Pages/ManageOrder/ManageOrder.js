@@ -5,7 +5,7 @@ import "./ManageOrder.css";
 const ManageOrder = () => {
   const [manageOrder, setManageOrder] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/orders/manage`)
+    fetch(`https://vast-escarpment-72434.herokuapp.com/orders/manage`)
       .then((res) => res.json())
       .then((data) => setManageOrder(data))
   }, []);

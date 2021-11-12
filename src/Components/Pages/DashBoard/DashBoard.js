@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useRouteMatch, Switch, Route } from "react-router-dom";
 import useAuth from "../../Hooks/UseAuth";
 import AddProduct from "../Home/Places/AddProduct/AddProduct";
+import ReviewForm from "../Home/Review/ReviewForm";
 import AdminRouter from "../LogIn/PrivetRouter/AdminRouter";
 import PrivetRoute from "../LogIn/PrivetRouter/PrivetRouter";
 import ManageOrder from "../ManageOrder/ManageOrder";
@@ -15,27 +16,38 @@ const DashBoard = () => {
     <div className="flex-wrap row">
       <div className="col-md-6 col-lg-2">
         <ul>
-          <li>
-            {admin && <Link to={`${url}/addadmin`}>Add admin</Link>}
-          </li>
-          <li>
-            {admin && <Link to={`${url}/addproduct`}>Add Products</Link>}
-          </li>
-          <li>
+        <li>
             <Link to={`${url}/myorder`}>My Order</Link>
           </li>
-          <li>
-            {admin && <Link to={`${url}/manageorder`}>Manage Order</Link>}
+        <li>
+            <Link to={`${url}/review`}>Review </Link>
           </li>
+          {admin &&
+            <>
+              <li>
+              <Link to={`${url}/addadmin`}>Add admin</Link>
+            </li>
+            <li>
+              <Link to={`${url}/addproduct`}>Add Products</Link>
+            </li>
+            
+            <li>
+              <Link to={`${url}/manageorder`}>Manage Order</Link>
+            </li>
+            </>
+            }
         </ul>
       </div>
       <div className="col-md-6 col-lg-8">
         <Switch>
-          <Route exact path={`${path}/addadmin`}>
+          <AdminRouter exact path={`${path}/addadmin`}>
             <Admin></Admin>
-          </Route>
+          </AdminRouter>
           <PrivetRoute exact path={`${path}/myorder`}>
             <MyOrder></MyOrder>
+          </PrivetRoute>
+          <PrivetRoute exact path={`${path}/review`}>
+            <ReviewForm></ReviewForm>
           </PrivetRoute>
           <AdminRouter path={`${path}/manageorder`}>
             <ManageOrder></ManageOrder>

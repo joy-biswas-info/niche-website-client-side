@@ -2,8 +2,13 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { Carousel } from "react-bootstrap";
 import "./Banner.css";
+import { useHistory } from "react-router";
 
 const Banner = () => {
+  const history = useHistory();
+  const handelClick = () => {
+    history.push("/products");
+  };
   return (
     <Carousel style={{ margin: "-100px 0 0 0 " }}>
       <Carousel.Item interval={1000}>
@@ -16,7 +21,10 @@ const Banner = () => {
           <h3 className="bg-warning p-2 text-black fs-2 fw-bold">
             IT'S STILL MAGIC THOUGH YOU KNOW HOW IT HAS DONE
           </h3>
-          <Button className="bg-warning px-2 text-black fs-3 fw-bold">
+          <Button
+            className="bg-warning px-2 text-black fs-3 fw-bold"
+            onClick={() => handelClick()}
+          >
             EXPLORE ALL
           </Button>
         </Carousel.Caption>
@@ -28,8 +36,13 @@ const Banner = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">SUCCESS IS THE MAXIMUM ABILITY TO UTLIZE THAT YOU HAVE</h3>
-          <Button className="bg-warning px-2 text-black fs-3 fw-bold">
+          <h3 className="bg-warning p-2 text-black fs-2 fw-bold">
+            SUCCESS IS THE MAXIMUM ABILITY TO UTLIZE THAT YOU HAVE
+          </h3>
+          <Button
+            className="bg-warning px-2 text-black fs-3 fw-bold"
+            onClick={() => handelClick()}
+          >
             EXPLORE ALL
           </Button>
         </Carousel.Caption>
@@ -49,7 +62,10 @@ const Banner = () => {
             Muppet Show to night. Here's the story of a lovely lady who was
             three very lovely.
           </p>
-          <Button className="bg-warning px-2 text-black fs-3 fw-bold">
+          <Button
+            className="bg-warning px-2 text-black fs-3 fw-bold"
+            onClick={() => handelClick()}
+          >
             EXPLORE ALL
           </Button>
         </Carousel.Caption>

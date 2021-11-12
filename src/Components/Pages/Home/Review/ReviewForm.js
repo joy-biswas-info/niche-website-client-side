@@ -8,7 +8,7 @@ const ReviewForm = () => {
     const { user } = useAuth();
     const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/review", data)
+      .post("https://vast-escarpment-72434.herokuapp.com/review", data)
       .then((res) => console.log(res))
       .then(alert("Your Review Has Been Added"));
   };
