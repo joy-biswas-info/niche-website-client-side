@@ -13,9 +13,9 @@ const Reviews = () => {
       <h2 className="fs-1 fw-bold text-center">
         <span style={{ color: "red" }}>What Our</span> Clint Says
       </h2>
-      <Carousel style={{ width: "600px",height:'300px', margin: "50px auto",display:'flex'  }}>
+      <Carousel>
         {reviews.map((review) => (
-          <Carousel.Item revirw={review} key={review._key} style={{ width: "600px",height:'300px', margin: "0px auto"}}>
+          <Carousel.Item revirw={review} key={review._key} >
             <div style={{width:'300px',height:'300px',margin:'0 auto',backgroundColor:'white',padding:'20px'}}>
             <h2>{review.name}</h2>
             <h2>{review?.review}</h2>
