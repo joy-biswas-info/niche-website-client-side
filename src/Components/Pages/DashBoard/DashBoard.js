@@ -11,6 +11,7 @@ import Admin from "./Admin";
 import PayNow from "./PayNow/PayNow";
 import './DashBoard.css'
 import { Container } from "react-bootstrap";
+import ManageProducts from "./ManageProducts/ManageProducts";
 
 const DashBoard = () => {
   const { admin,logOut,user } = useAuth();
@@ -20,7 +21,9 @@ const DashBoard = () => {
       <div className="flex-wrap row">
       <div className="col-md-6 col-lg-2">
         <ul>
-        <li>
+              {!admin &&
+            <>
+                <li>
             <Link to={`${url}/myorder`}>My Order</Link>
           </li>
         <li>
@@ -29,6 +32,9 @@ const DashBoard = () => {
         <li>
             <Link to={`${url}/review`}>Review </Link>
           </li>
+
+            </>
+              }
           {admin &&
             <>
               <li>
@@ -40,6 +46,9 @@ const DashBoard = () => {
             
             <li>
               <Link to={`${url}/manageorder`}>Manage Order</Link>
+            </li>
+            <li>
+              <Link to={`${url}/manageproducts`}>Manage Product </Link>
             </li>
             </>
           }
@@ -66,6 +75,9 @@ const DashBoard = () => {
           </AdminRouter>
           <AdminRouter path={`${path}/addproduct`}>
             <AddProduct></AddProduct>
+          </AdminRouter>
+          <AdminRouter path={`${path}/manageproducts`}>
+            <ManageProducts></ManageProducts>
           </AdminRouter>
         </Switch>
       </div>
