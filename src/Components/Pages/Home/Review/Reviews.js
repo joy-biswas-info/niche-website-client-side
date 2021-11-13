@@ -16,6 +16,7 @@ const Reviews = () => {
       <Carousel style={{ width: "600px",height:'300px', margin: "50px auto",display:'flex'  }}>
         {reviews.map((review) => (
           <Carousel.Item revirw={review} key={review._key} style={{ width: "600px",height:'300px', margin: "0px auto"}}>
+            <div style={{width:'300px',height:'300px',margin:'0 auto',backgroundColor:'white',padding:'20px'}}>
             <h2>{review.name}</h2>
             <h2>{review?.review}</h2>
             {review.rating === "1" && (
@@ -64,6 +65,7 @@ const Reviews = () => {
                 <i className="fas fa-star"></i>
               </>
             )}
+            </div>
           </Carousel.Item>
         ))}
       </Carousel>

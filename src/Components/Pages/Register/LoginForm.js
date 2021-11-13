@@ -31,9 +31,11 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className="d-flex">
+      <div className="col-md-3"></div>
+      <div className="col-md-6">
       <form onSubmit={handelLoginSubmit}>
-        <h3 className="text-warning fs-2 fw-bold">Please Register</h3>
+        <h3 className="text-warning fs-2 fw-bold">Please Login</h3>
         <div className="row mb-3">
           <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">
             Email
@@ -68,7 +70,9 @@ const LoginForm = () => {
           Log In
         </button>
       </form>
-      <NavLink to="/register">New User ? Please Log In</NavLink>
+      <NavLink to="/register">New User ? Please Register </NavLink>
+      </div>
+      <div className="col-md-3"></div>
     </div>
   );
 };

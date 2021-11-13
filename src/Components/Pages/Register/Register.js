@@ -3,9 +3,9 @@ import {
   getAuth,
   updateProfile,
 } from "@firebase/auth";
-import react, { useState } from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import { Link, NavLink,useHistory,useLocation } from "react-router-dom";
+import {NavLink,useHistory,useLocation } from "react-router-dom";
 import useAuth from "../../Hooks/UseAuth";
 
 const Register = () => {
