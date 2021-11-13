@@ -1,0 +1,8 @@
+ul,li{
+    list-style: none;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #D1E7DD;
+}

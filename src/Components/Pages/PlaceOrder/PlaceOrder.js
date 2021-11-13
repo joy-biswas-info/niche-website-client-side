@@ -28,7 +28,7 @@ const PlaceOrder = () => {
       <Row>
         <Col xs={6}>
           <h2>{product?.name} </h2>
-          <img src={product?.img} alt="product" className="img-fluid" />
+          <img src={product?.img} alt="product" style={{maxWidth:'60%'}} />
         </Col>
         <Col xs={6}>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -36,34 +36,34 @@ const PlaceOrder = () => {
             {user.email && (
               <input
                 {...register("email")}
-                defaultValue={user.email}
+                defaultValue={user.email} style={{width:'64%'}}
                 required
               />
             )}{" "}
-            <br />
+            <br/> <br/>
             {product?.name && (
               <input
                 {...register("name")}
-                defaultValue={product.name}
+                defaultValue={product.name} style={{width:'64%'}}
                 required
               />
             )}
-            <br />
-            <input {...register("address")} required placeholder="Address" />
-            <br />
+            <br/> <br/>
+            <input {...register("address")} required placeholder="Address" style={{width:'64%'}} />
+            <br/> <br/>
             <input
               type="number"
               {...register("quantity")}
               required
-              placeholder="Quantity"
+              placeholder="Quantity" style={{width:'64%'}}
             />
-            <br />
+            <br/> <br/>
             <input
               {...register("phoneNumber")}
               required
-              placeholder="Phone Number"
+              placeholder="Phone Number" style={{width:'64%'}}
             />
-            <br />
+            <br/> <br/>
             <input type="submit" value="place Order" />
           </form>
         </Col>

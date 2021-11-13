@@ -16,8 +16,8 @@ const AddProduct = () => {
   };
 
   return (
-    <Container className="services varient-light" style={{backgroundImage:"url(./image/slider1.jpg)",backgroundRepeat:"no-repeat",height:"600px"}}>
-      <h2 className="text-center text-white ">Add A Product</h2>
+    <Container className="services varient-light addproduct">
+      <h2 className="text-center">Add A Product</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto">
           <input
             {...register("name", { required: true})}
@@ -25,7 +25,7 @@ const AddProduct = () => {
             style={{width:"64%",marginBottom:'15px'}}
           />{" "}
           <br />
-          <input
+          <textarea
             {...register("description")}
           placeholder="Product Description"
           style={{width:"64%",marginBottom:'15px'}}

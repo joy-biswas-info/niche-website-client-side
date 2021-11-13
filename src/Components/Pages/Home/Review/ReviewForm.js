@@ -14,32 +14,36 @@ const ReviewForm = () => {
   };
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-            <h2 className="text-center">Please review Your Exprience</h2>
+            <form onSubmit={handleSubmit(onSubmit)} style={{backgroundColor:"#D1E7DD",padding:'20px'}}>
+            <h2 className="text-center">Please Share Your Exprience</h2>
             {user.email && (
               <input
                 {...register("email")}
-                defaultValue={user.email}
+              defaultValue={user.email}
+              style={{width:'64%'}}
                 required
               />
-            )}
+            )}<br />
+            <br />
             {user.email && (
               <input
                 {...register("name")}
-                defaultValue={user.displayName}
+                defaultValue={user.displayName} style={{width:'64%'}}
                 required
               />
             )}
             <br />
             <br />
-            <textarea {...register("review")} required placeholder="review" />
+            <textarea {...register("review")} required placeholder="review" style={{width:'64%'}} />
+            <br />
             <br />
             <input
               type="number"
               {...register("rating")}
               required
-              placeholder="Rating"
+              placeholder="Rating (1-5)" style={{width:'64%'}}
             />
+            <br />
             <br />
             <input type="submit" value="Review" />
           </form>

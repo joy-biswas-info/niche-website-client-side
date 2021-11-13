@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Container, Image, Nav, Navbar, Button } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import React from "react";
+import { Container,Nav, Navbar, Button } from "react-bootstrap";
+import { Link} from "react-router-dom";
 import useAuth from "../../Hooks/UseAuth";
 
 const Navigation = () => {
@@ -14,7 +13,7 @@ const Navigation = () => {
         expand="lg"
         variant="light"
         className="fw-bold"
-        style={{ zIndex: "4" }}
+        style={{ zIndex: "4",backgroundImage:"url('./image/slider1.jpg')"}}
       >
         <Container>
           <Navbar.Brand as={Link} to="/home">
@@ -35,8 +34,8 @@ const Navigation = () => {
                 </Nav.Link>
               )}
               {user.email ? (
-                <div>
-                  <Button variant="worning" onClick={logOut}>
+                <div style={{backgroundColor:'red',paddingRight:"10px",borderRadius:'5px'}}>
+                  <Button variant="warning" onClick={logOut}>
                     Log Out
                   </Button>{" "}
                   {user?.displayName}

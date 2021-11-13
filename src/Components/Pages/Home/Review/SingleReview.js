@@ -4,16 +4,16 @@ import { Carousel } from "react-bootstrap";
 const SingleReview = (props) => {
   return (
     <Carousel.Item>
-      <img
-        className="d-block w-100"
-        src="holder.js/800x400?text=Second slide&bg=eee"
-        alt="Review slide"
-      />
-      <Carousel.Caption>
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="./image/slider1.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
   );
 };
 
