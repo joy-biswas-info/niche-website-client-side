@@ -15,7 +15,7 @@ const PlaceOrder = () => {
     fetch(`https://vast-escarpment-72434.herokuapp.com/placeorder/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
-  }, []);
+  }, [id]);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios

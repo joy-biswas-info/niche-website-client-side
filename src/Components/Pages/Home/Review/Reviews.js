@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Carousel, Container } from "react-bootstrap";
-import SingleReview from "./SingleReview";
 
 const Reviews = () => {
   const [reviews, setReview] = useState([]);

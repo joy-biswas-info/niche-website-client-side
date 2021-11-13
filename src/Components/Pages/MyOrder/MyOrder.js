@@ -16,7 +16,7 @@ const MyOrder = () => {
       .then((data) => {
         setMyOrder(data);
       });
-  }, []);
+  }, [user.email]);
 
   const handelCancel = (_id) => {
     const url = `https://vast-escarpment-72434.herokuapp.com/order/${_id}`;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import {Container} from "react-bootstrap";
 import { useForm} from "react-hook-form";
 import "./AddProduct.css";
 import axios from "axios";
